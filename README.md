@@ -1,14 +1,28 @@
-# Workshop: Deploying and Scaling Node.js with Kubernetes
+# Workshop: Kubernetes for Developers
 
-Workshop at [Node Interactive North America 2016](http://events.linuxfoundation.org/events/node-interactive)
+Workshop at [Kubernetes Philly](https://www.meetup.com/Kubernetes-Philly/events/234829676/)
 
-## Presenters
-[Ross Kukulinski](https://twitter.com/rosskukulinski) and [Nathan White](https://twitter.com/_nw_)
+## Presenter
+[Ross Kukulinski](https://twitter.com/rosskukulinski)
 
 
 ## Workshop Description
 
-As companies look to build out their next-generation architectures, Node.js and containerization are emerging as two major components for powering rapid technical innovation. In this technical workshop, we will show you how to get started with Node.js, Docker and Kubernetes and cover the pitfalls that often occur when starting and how to avoid them. Most of this workshop will be a live demonstration as we dockerize a Node.js application, deploy to Kubernetes, and scale to handle a large amount of traffic.
+Kubernetes accelerates technical and business innovation through rapid development and deployment of applications. Learn how to deploy, scale, and manage your applications in a containerized environments using Kubernetes.  
+
+In this 60-minute workshop, Ross Kukulinski will review fundamental Kubernetes concepts and architecture and then will show how to containerize and deploy a multi-tier web application to Kubernetes.  
+
+Topics that will be covered include:
+
+• Working with the Kubernetes CLI (kubectl)
+
+• Pods, Deployments, & Services
+
+• Manual & Automated Application Scaling
+
+• Troubleshooting and debugging
+
+• Persistent storage
 
 
 ## Workshop Slides
@@ -32,6 +46,30 @@ http://www.slideshare.net/kuxman/nodejs-and-containers-go-together-like-peanut-b
 * Deploy CTM to minikube / Kubernetes
 
 ## Deploying Cloudy Time Machine to Kubernetes
+
+### Installing minikube
+
+Follow instructions at https://github.com/kubernetes/minikube/releases
+
+For OSX:
+
+```
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.13.0/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+```
+
+### minikube hello world
+
+```minikube start```
+
+```kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080```
+
+```kubectl expose deployment hello-minikube --type=NodePort```
+
+```kubectl get pod```
+
+```curl $(minikube service hello-minikube --url)```
+
+```minikube stop```
 
 ### Working with minikube
 
