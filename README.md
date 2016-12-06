@@ -27,8 +27,7 @@ Topics that will be covered include:
 
 ## Workshop Slides
 
-[Workshop Slides - TBD]()  
-[Workshop Video - TBD]()  
+[Workshop Slides - TBD](http://www.slideshare.net/kuxman/kubernetes-101-for-developers)  
 [Workshop Screencast - TBD]()
 
 ## Background Reading / Videos
